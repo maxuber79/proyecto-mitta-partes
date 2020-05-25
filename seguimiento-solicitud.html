@@ -8,12 +8,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="library/datatable/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="library/datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="library/select2/css/select2.css">
+    <link rel="stylesheet" href="library/select2/css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="library/datepicker/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <title>Mitta!</title>
 </head>
 
@@ -44,40 +46,28 @@
                                 aria-hidden="true"></i>
                             <!-- <span class="navbar-toggler-icon"></span> -->
                         </button>
-
+    
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="dashboard.html">Inicio <span
+                                            class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                    <a class="nav-link" href="ingreso-solicitud.html">Ingreso Solicitud</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1"
-                                        aria-disabled="true">Disabled</a>
+                                    <a class="nav-link" href="seguimiento-solicitud.html">Seguimiento Solicitud</a>
                                 </li>
-
+    
                             </ul>
                             <ul class="navbar-nav ml-auto nav-flex-icons">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                            class="fa fa-user"></i> Profile </a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Mi cuenta</a>
                                     <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                                        <a class="dropdown-item" href="#">My account</a>
-                                        <a class="dropdown-item" href="#">Log out</a>
+                                        <a class="dropdown-item" href="perfil.html">Mi cuenta</a>
+                                        <a class="dropdown-item" href="#">Salir</a>
                                     </div>
                                 </li>
                             </ul>
@@ -132,714 +122,718 @@
                                 <div class="col-12">
                                     <div class="heading-section">
                                         <h3 class="title-heading">
-                                            <span class="icon-envio title-icon"></span>
-                                            <span class="inner-title">Estado de Solicitud</span>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <div class="container">
-                                        <div class="card">
-                                            <div class="row d-flex justify-content-between top">
-                                                <div class="d-flex">
-                                                    <h5>ID <span class="text-primary font-weight-bold">#001072</span></h5>
-                                                </div>
-                                                <div class="d-flex flex-column text-sm-right">
-                                                    <p class="mb-0">Fecha de Inicio <span>01/12/19</span></p>
-                                                    <p>Empresa <span class="font-weight-bold">Lorem Ipsun Dolor</span></p>
-                                                </div>
-                                            </div> <!-- Add class 'active' to progress -->
-                                            <div class="row d-flex justify-content-center">
-                                                <div class="col-12">
-                                                    <ul id="progressbar" class="text-center">
-                                                        <li class="active step0"></li>
-                                                        <!-- <li class="active step0"></li> -->
-                                                        <li class="active step0"></li>
-                                                        <li class="step0"></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-between top">
-                                                <div class=" icon-content">
-                                                    <span class="icon icon-file-tray-full"></span>
-                                                    <p class="text-icon">Solicitud<br>en Proceso</p>
-                                                </div>
-                                                <div class=" icon-content">
-                                                    <span class="icon icon-camion"></span>
-                                                    <p class="text-icon">Solicitud<br>en Camino</p>
-                                                </div>
-                                                <div class=" icon-content">
-                                                    <span class="icon icon-pin1"></span>
-                                                    <p class="text-icon">Solicitud<br>Entregada</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 py-3">
-                                    <hr>
-                                </div>
-                                <div class="col-12">
-                                    <div class="heading-section">
-                                        <h3 class="title-heading">
+                                            <!-- <span class="icon-envio title-icon"></span> -->
                                             <span class="icon-search-box title-icon"></span>
-                                            <span class="inner-title">Buscar Solicitud</span>
+                                            <span class="inner-title">Busqueda de Solicitud</span>
                                         </h3>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">                                
-                                    <div class="form-group wrapp-input">
-                                        <label class="label-custom">Fecha Inicio</label>
-                                        <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
-                                            autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="form-group wrapp-input">
-                                        <label class="label-custom">Fecha Termino</label>
-                                        <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
-                                            autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
-                                    </div>
-                                </div>
-                                <div class="col-12 py-3">
+                                <div class="col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-2">
                                     <div class="input-group-prepend wrapp-input">
-                                        <input type="search" class="form-control expanded-search" placeholder="Buscar solicitud" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <input type="search" class="form-control expanded-search" placeholder="Ej. ODB12324567" aria-label="Recipient's username" aria-describedby="button-addon2">
                                         <div class="input-group-prepend">
                                             <button class="btn btn-search red" type="button" id="button-addon2">Buscar</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 py-3">
+                                <div class="col-12 p-2">
+                                    <a class="" data-toggle="collapse" data-target="#mascriterios" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa fa-sort" aria-hidden="true"></i> Más criterios de busqueda</a>
+                                    <!-- <span class="line-bottom" style="display:block;border-bottom: 1px solid #d6d6d6;margin: 0 0 8px 0;"></span> -->
+                                </div>
+                                <div class="col-12">
+                                    <div class="collapse" id="mascriterios">
+                                        <div class="row border border-light bg-white p-3">
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                <div class="form-group wrapp-input">
+                                                    <label class="label-custom">Fecha Inicio</label>
+                                                    <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
+                                                    autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                <div class="form-group wrapp-input">
+                                                    <label class="label-custom">Fecha Termino</label>
+                                                    <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value="" autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
+                                                </div>
+                                            </div>                                            
+                                            <div class="col-12 col-sm-6 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                            <label class="label-custom" for="inputNumeroDocumento">N° Documento TNT</label>
+                                            <input name="inputNumeroDocumento" type="text" id="inputNumeroDocumento" class="form-control expanded-input">                                             
+                                            </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                            <label class="label-custom" for="inputDestinatario">Destinatario</label>
+                                            <select name="inputDestinatario" class="form-control expanded-select empresa" id="inputDestinatario">
+                                            <option>Empresa 1</option>
+                                            <option>Empresa 2</option>
+                                            <option>Empresa 3</option>
+                                            <option>Empresa 4</option>
+                                            <option>Empresa 5</option>
+                                            </select>
+                                            </div>
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 py-3 mt-3">
                                     <div class="table-responsive">
                                         <table id="table_solicitudes" class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th></th>
-                                                    <th scope="col"><span class="font-weight-bold">ID Solicitud</span></th>
-                                                    <th scope="col"><span class="font-weight-bold">Empresa</span></th>
-                                                    <th scope="col"><span class="font-weight-bold">Fecha de inicio</span></th>
-                                                    <th scope="col"><span class="font-weight-bold">Estado</span></th>
-                                                    <th scope="col"><span class="font-weight-bold">Acciones</span></th>
+                                                    <th data-priority="1"><span class="font-weight-bold">ID Solicitud</span></th>
+                                                    <th><span class="font-weight-bold">Empresa</span></th>
+                                                    <th><span class="font-weight-bold">Fecha</span></th>
+                                                    <th data-priority="1"><span class="font-weight-bold">Estado</span></th>
+                                                    <th><span class="font-weight-bold">Acciones</span></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-danger">Devuelto</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a>
-                                                            <a href="#" class="icon-eliminar table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-warning">En transito</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-danger">Devuelto</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-warning">En transito</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-danger">Devuelto</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#centralModalSuccess">Action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Another action</a>
-                                                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                                                        data-target="#modal-centrado">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-warning">En transito</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
                                     
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
-                                    
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
                                     
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
-                                    
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
                                     
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
-                                    
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
                                     
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
-                                                    <td>
-                                                        <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
-                                    
-                                                            <div class="dropdown wrapp-dropdown">
-                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
-                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false"></a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>001072</td>
-                                                    <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
                                                     <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-danger">Rechazado</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td></td>
+                                    
                                                     <td>001072</td>
                                                     <td>Lorem ipsum dolor sit amet</td>
-                                                    <td>20/03/2020</td>
-                                                    <td><span class="badge badge-warning">En Proceso</span></td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
                                                     <td>
                                                         <div class="wrapp-btn-table">
-                                                            <a href="#" class="icon-editar-user table-icon" data-toggle="modal"
-                                                                data-target="#modal-centrado"></a> <a href="#" class="icon-eliminar table-icon"
-                                                                data-toggle="modal" data-target="#modal-centrado"></a>
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
                                     
                                                             <div class="dropdown wrapp-dropdown">
                                                                 <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
                                                                     id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false"></a>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                    
+                                                    <td>001072</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>20/03/2020 <span class="icon-calendar-full mx-2"></span> 20/05/2020</td>
+                                                    <td><span class="badge badge-success">Entregado</span></td>
+                                                    <td>
+                                                        <div class="wrapp-btn-table">
+                                                            <a title="ver" href="#" class="icon-eye table-icon" data-toggle="modal"
+                                                                data-target="#verSolicitud"></a>
+                                                            <a title="Estado" href="#" class="icon-caja table-icon" data-toggle="modal"
+                                                                data-target="#estadoSolicitud"></a>
+                                    
+                                                            <div class="dropdown wrapp-dropdown">
+                                                                <a href="#" class="icon-menu-tabla table-icon dropdown-toggle" role="button"
+                                                                    id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"></a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownmenulink">
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEliminar"><span
+                                                                            class="icon-eliminar"></span> Eliminar</a>
+                                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalSuccess"><span
+                                                                            class="icon-editar-user"></span> Editar</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -848,40 +842,19 @@
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th>
-                                                    </th>
-                                                    <th>Position
-                                                    </th>
-                                                    <th>Office
-                                                    </th>
-                                                    <th>Age
-                                                    </th>
-                                                    <th>Start date
-                                                    </th>
-                                                    <th>Salary
-                                                    </th>
+                                                    <th>ID Solicitud</th>
+                                                    <th>Empresa</th>
+                                                    <th>Fecha</th>
+                                                    <th>Estado</th>
+                                                    <th>Acciones</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
 
                                 </div>
-                                
-                                
-                                <div class="col-12 py-3">
-                                    <div class="wrapper-btn btn-right">
-                                        <a href="#" class="btn btn-full red"><span class="icon-editar-user"></span> Editar
-                                            Solicitud</a>
-                                        <a href="#" class="btn btn-full red"><span class="icon-save"></span> Guardar
-                                            Solicitud</a>
-                                    </div>
-                                </div>
-                                
                             </form>
                         </div>
-    
-    
-    
                     </div>
                     <!--./col-12-->
                 </div>
@@ -893,168 +866,229 @@
     
     </section>
 <footer id="footer">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
-                <p class="copyright">© 2020 Mitta</p>
+                <span class="text-white p-2 ">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Reservas <span>223 608 666</span>
+                </span>
+                <span class="text-white p-2">
+                    | <i class="fa fa-user" aria-hidden="true"></i> Servicio al cliente <span class="number"
+                        style="padding-right: 5px;">800 370 111</span> (L a V De 8 a 20 hrs) |
+                </span>
+                <span class="text-white p-2">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Asistencia 24/7<span>229 418 950</span>
+                </span>
+            </div>
+            <div class="col-12">
+                <p class="copyright py-3 mt-2">© 2020 Mitta</p>
             </div>
         </div>
     </div>
 </footer>
 
 
-<!-- Central Modal Medium Success -->
-<div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!-- Central Modal Medium eliminar -->
+<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-notify modal-success" role="document">
+    <div class="modal-dialog modal-dialog-alert modal-notify modal-danger" role="document">
         <!--Content-->
         <div class="modal-content">
-            <!--Header-->
-            <div class="modal-header">
-                <p class="heading lead">Modal Success</p>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" class="white-text">&times;</span>
-                </button>
-            </div>
-
-            <!--Body-->
-            <div class="modal-body">
-                <div class="text-center">
-                    <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam
-                        blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat.
-                        Esse ratione fuga, enim, ab officiis totam.</p>
+            <div class="modal-body modal-danger">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <i class="fa fa-times-circle" aria-hidden="true" style="font-size: 3rem;"></i>
+                    <p class="pt-3 mx-2">La solicitud será aliminada</p>
+                    <a type="button" class="btn btn-danger waves-effect waves-light">¿Estas seguro?</a>
+                    <a type="button" class="btn btn-outline-danger" data-dismiss="modal">No, Gracias</a>
                 </div>
-            </div>
-
-            <!--Footer-->
-            <div class="modal-footer justify-content-center">
-                <a type="button" class="btn btn-success">Get it now <i class="fa fa-gem ml-1 white-text"></i></a>
-                <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, thanks</a>
             </div>
         </div>
         <!--/.Content-->
     </div>
 </div>
-<!-- Central Modal Medium Success-->
-<!-- Modal -->
-<div class="modal fade" id="modal-centrado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+
+<div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-alert modal-notify modal-success" role="document">
+        <!--Content-->
         <div class="modal-content">
+            <div class="modal-body modal-body-success">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 3rem;"></i>
+                    <p class="pt-3 mx-2">La solicitud fué creada exitosamente!</p>
+                    <!-- <a type="button" class="btn btn-success waves-effect waves-light">¿Estas seguro?</a>
+                        <a type="button" class="btn btn-outline-success" data-dismiss="modal">No, Gracias</a> -->
+                </div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="verSolicitud" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-mitta" role="document">
+        <div class="modal-content">
+            <form method="get" action="">
+                <div class="modal-header">
+                    <h5 class="h3 modal-title font-weight-bold">Detalle Solicitud</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!--
+                                N° Documento (TNT)
+                                Destinatario (Select 2)
+                                Fecha
+                                Envio a empresa Externa (Check)
+                                Empresa (Select 2)
+                                Observación (multiline)
+                            -->
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group wrapp-input">
+                                <label class="label-custom" for="numeroDocumento">N° Documento (TNT)</label>
+                                <input type="text" id="numeroDocumento" class="form-control expanded-input"
+                                    placeholder="001072" required disabled>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group wrapp-input">
+                                <label class="label-custom" for="destinatario">Destinatario</label>
+                                <input type="text" id="destinatario" class="form-control expanded-input"
+                                    placeholder="Santiago" required disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group wrapp-input">
+                                <label class="label-custom">Fecha Inicio</label>
+                                <input type="text" class="form-control expanded-input datepicker"
+                                    id="aseg_fec_nacimiento" value="" autocomplete="new-date"
+                                    data-date-format="mm/dd/yyyy" placeholder="05/06/2020" disabled>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <span class="py-2"></span>
+                            <div class="form-group vertical-centering">
+                                <div class="custom-control custom-checkbox vertical-object">
+                                    <input class="custom-control-input" type="checkbox" value="" id="invalidCheck3"
+                                        disabled>
+                                    <label class="custom-control-label" for="invalidCheck3">
+                                        Envio a empresa Externa
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group wrapp-input">
+                                <label name="empresa" class="label-custom" for="empresa">Empresa</label>
+                                <select class="form-control expanded-select empresa" id="empresa" disabled>
+                                    <option>Empresa 1</option>
+                                    <option>Empresa 2</option>
+                                    <option>Empresa 3</option>
+                                    <option>Empresa 4</option>
+                                    <option>Empresa 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group wrapp-input">
+                                <label class="label-custom" for="exampleFormControlTextarea1">Example textarea</label>
+                                <textarea class="form-control expanded-textarea" id="exampleFormControlTextarea1"
+                                    rows="3" disabled></textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="wrapper-btn btn-left">
+                                <button type="submit" class="btn btn-full red guardar"><span
+                                        class="icon-editar-user"></span> Edición Rápida</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="crear-solicitud" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-mitta" role="document">
+        <div class="modal-content">
+            <form class="needs-validation" novalidate=""></form>
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Lorem ipsum dolor</h5>
+                <h5 class="h3 modal-title font-weight-bold">Crear Solicitud</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form class="row">
-                    <div class="col-6">
 
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group wrapp-input">
                             <label class="label-custom">Fecha Inicio</label>
                             <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento"
-                                value="" autocomplete="new-date" data-date-format="mm/dd/yyyy">
+                                value="" autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group wrapp-input">
                             <label class="label-custom">Fecha Termino</label>
                             <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento"
-                                value="" autocomplete="new-date" data-date-format="mm/dd/yyyy">
+                                value="" autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
+                            <label class="label-custom" for="exampleInputEmail1">Rut Empresa <span
+                                    class="obligatorio">*</span></label>
+                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
+                                placeholder="12345678-9" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group wrapp-input">
+                            <label class="label-custom" for="exampleInputEmail1">Nombre Empresa <span
+                                    class="obligatorio">*</span></label>
+                            <input type="text" id="inputPassword" class="form-control expanded-input"
+                                placeholder="Mi Empresa" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group wrapp-input">
+                            <label class="label-custom" for="exampleInputEmail1">Nombre Contacto <span
                                     class="obligatorio">*</span> </label>
                             <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
                                 placeholder="" required>
                         </div>
                     </div>
-
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
-                                    class="obligatorio">*</span> </label>
-                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
-                                placeholder="" required>
+                            <label class="label-custom" for="exampleInputEmail1">Email</label>
+                            <input type="email" id="inputPassword" class="form-control expanded-input"
+                                placeholder="miemail@midominio.cl" required>
                         </div>
                     </div>
-
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
-                                    class="obligatorio">*</span> </label>
-                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
-                                placeholder="" required>
+                            <label class="label-custom" for="exampleInputEmail1">Teléfono</label>
+                            <input type="text" class="form-control expanded-input" id="exampleInputEmail1"
+                                placeholder="+562212345678" required>
                         </div>
                     </div>
-
-                    <div class="col-6">
-                        <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
-                                    class="obligatorio">*</span> </label>
-                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
-                                placeholder="" required>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
-                                    class="obligatorio">*</span> </label>
-                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
-                                placeholder="" required>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
-                                    class="obligatorio">*</span> </label>
-                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
-                                placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleInputEmail1">Lorem ipsum <span
-                                    class="obligatorio">*</span> </label>
-                            <input type="text" id="exampleInputEmail1" class="form-control expanded-input"
-                                placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control expanded-select" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group wrapp-input">
-                            <label class="label-custom" for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control expanded-select" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group wrapp-input">
                             <label class="label-custom" for="file-input"><i class="fa fa-upload" aria-hidden="true"></i>
                                 Subir
@@ -1062,210 +1096,114 @@
                             <input type="file" class="file-input" id="file-input">
                         </div>
                     </div>
-
                     <div class="col-12">
                         <div class="form-group wrapp-input">
-                            <div class="custom-control custom-checkbox">
-                                <input class="custom-control-input" type="checkbox" id="gridCheck">
-                                <label class="custom-control-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
+                            <label class="label-custom" for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control expanded-textarea" id="exampleFormControlTextarea1"
+                                rows="3"></textarea>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-12">
-                        <div class="wrapper-btn btn-left">
-                            <button type="submit" class="btn btn-full red">Ingresar</button>
-                        </div>
-                    </div>
-
-
-                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-full red" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-full black">Grabar Cambios</button>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="wrapper-btn btn-right">
+                            <a href="#" class="btn btn-full red guardar"><span class="icon-save"></span> Ingresar
+                                Solicitud</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            </form>
         </div>
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+
+<!-- Modal estado solicitud -->
+<div class="modal fade" id="estadoSolicitud" data-backdrop="static" tabindex="-1" role="dialog"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-mitta" role="document">
         <div class="modal-content">
+            <form class="needs-validation" novalidate=""></form>
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <h5 class="h3 modal-title font-weight-bold">Estado Solicitud</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form class="needs-validation" novalidate="">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="firstName">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-                            <div class="invalid-feedback">
-                                Valid last name is required.
-                            </div>
-                        </div>
-                    </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="wrapp-form"
+                            style="/*border-radius:1rem;padding: 1.8rem 1.6rem;margin: 2rem 0 1rem 0;border: 1px solid #cecece;background-color: #fbfbfb;*/">
+                            <form class="row">
+                                <div class="col-12">
+                                    <article class="card" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+                                        <div class="card-body row">
+                                            <div class="col-3"> <strong>Fecha de Inicio:</strong> <br>01/12/19</div>
+                                            <div class="col-5"> <strong>Contacto Envío:</strong> <br> NOMBRE EMPRESA, |
+                                                <i class="fa fa-phone"></i> +569912345678 </div>
+                                            <div class="col-2"> <strong>Status:</strong> <br> <span
+                                                    class="badge badge-warning">En transito</span> </div>
+                                            <div class="col-2"> <strong>N° de TNT:</strong> <br> #001072 </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="container">
+                                        <div class="card">
 
-                    <div class="mb-3">
-                        <label for="username">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">@</span>
-                            </div>
-                            <input type="text" class="form-control" id="username" placeholder="Username" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your username is required.
-                            </div>
+                                            <div class="row d-flex justify-content-center">
+                                                <div class="col-12">
+                                                    <!-- Ingresado, en tránsito, recibido. Devuelto -->
+                                                    <ul id="progressbar" class="text-center">
+                                                        <li class="active step0"></li>
+                                                        <!-- <li class="active step0"></li> -->
+                                                        <li class="active step0"></li>
+                                                        <li class="step0"></li>
+                                                        <li class="step0"></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-between top">
+                                                <div class=" icon-content">
+                                                    <span class="icon icon-caja"></span>
+                                                    <p class="text-icon">Solicitud<br>Ingresada</p>
+                                                </div>
+                                                <div class=" icon-content">
+                                                    <span class="icon icon-camion"></span>
+                                                    <p class="text-icon">Solicitud<br>en Transito</p>
+                                                </div>
+                                                <div class=" icon-content">
+                                                    <span class="icon icon-pin1"></span>
+                                                    <p class="text-icon">Solicitud<br>Entregada</p>
+                                                </div>
+                                                <div class=" icon-content">
+                                                    <span class="icon  icon-sync"></span>
+                                                    <p class="text-icon">Solicitud<br>Devuelta</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                        <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
-                        <div class="invalid-feedback">
-                            Please enter your shipping address.
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-5 mb-3">
-                            <label for="country">Country</label>
-                            <select class="custom-select d-block w-100" id="country" required="">
-                                <option value="">Choose...</option>
-                                <option>United States</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid country.
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <label for="state">State</label>
-                            <select class="custom-select d-block w-100" id="state" required="">
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="zip">Zip</label>
-                            <input type="text" class="form-control" id="zip" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Zip code required.
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="mb-4">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Shipping address is the same as my
-                            billing address</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                    </div>
-                    <hr class="mb-4">
-
-                    <h4 class="mb-3">Payment</h4>
-
-                    <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
-                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=""
-                                required="">
-                            <label class="custom-control-label" for="credit">Credit card</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
-                                required="">
-                            <label class="custom-control-label" for="debit">Debit card</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
-                                required="">
-                            <label class="custom-control-label" for="paypal">PayPal</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-name">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                            <small class="text-muted">Full name as displayed on card</small>
-                            <div class="invalid-feedback">
-                                Name on card is required
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-number">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Credit card number is required
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-expiration">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Expiration date required
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-cvv">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                            <div class="invalid-feedback">
-                                Security code required
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-                </form>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 
-
-  <!-- Optional JavaScript -->
+<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script type="text/javascript" src="library/boostrap/dist/js/jquery-3.4.1.min.js"></script>
+<script src="library/boostrap/dist/js/jquery-3.4.1.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 <!-- Menu Toggle Script -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
@@ -1274,11 +1212,53 @@
 <script type="text/javascript" src="library/datatable/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="library/datatable/js/dataTables.bootstrap4.min.js"></script>
 
-<!-- DataPicker -->
-<script type="text/javascript" src="library/datepicker/bootstrap-datepicker.min.js"></script>
-<script type="text/javascript" src="library/datepicker/custom-datepicker.js"></script>
-<script type="text/javascript" src="library/datepicker/bootstrap-datepicker.es.min.js"></script>
+<!-- slect 2 Script -->
+<script src="library/select2/js/select2.min.js"></script>
 
+<script src="library/datatable/DataTables-1.10.21/js/dataTables-responsive.min.js"></script>
+<!-- DataPicker -->
+<script src="library/datepicker/bootstrap-datepicker.min.js"></script>
+<script src="library/datepicker/custom-datepicker.js"></script>
+<script src="library/datepicker/bootstrap-datepicker.es.min.js"></script>
+<script>
+    $(document).ready(function () {
+        /* data table */
+        jQuery('#table_solicitudes').DataTable({
+            responsive: true,
+            columnDefs: [
+                { responsivePriority: 1, targets: 0 },
+                { responsivePriority: 2, targets: -1 }
+            ]
+        });
+
+        /* onlclick button */
+        $('#btn-one, .guardar').click(function (e) {
+            e.preventDefault
+            $('#btn-one, .guardar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...').addClass('disabled');
+        });
+
+        /* select 2 */
+        $('select').each(function () {
+            $(this).select2({
+                theme: 'bootstrap4',
+                tags: "true",
+                placeholder: "Select an option",
+                allowClear: true
+            });
+        });
+
+        /* $('.ciudad').select2({
+            theme: 'bootstrap4',
+            allowClear: true,
+            placeholder: 'Position'
+        });
+        $('.comuna').select2({
+            theme: 'bootstrap4',
+            allowClear: true,
+            placeholder: 'Position'
+        }); */
+    });
+</script>
 <script>
     $(document).ready(function () {
         jQuery('#table_solicitudes').DataTable();

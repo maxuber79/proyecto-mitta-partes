@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="library/boostrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <title>Mitta!</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="wrapper-brand">
+                        <div class="vertical-centered">
+                            <img class="brand-heading" src="images/mitta-black.png" alt="" width="" height="40px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6"></div>
+            </div>
+        </div>
+    </header>
+    <section id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-mitta navbar-expand-lg">
+                        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                        <button class="navbar-toggler mitta-toggler float-right" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"
+                                aria-hidden="true"></i>
+                            <!-- <span class="navbar-toggler-icon"></span> -->
+                        </button>
+    
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="dashboard.html">Inicio <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ingreso-solicitud.html">Ingreso Solicitud</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="seguimiento-solicitud.html">Seguimiento Solicitud</a>
+                                </li>
+    
+                            </ul>
+                            <ul class="navbar-nav ml-auto nav-flex-icons">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Mi cuenta</a>
+                                    <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                                        <a class="dropdown-item" href="perfil.html">Mi cuenta</a>
+                                        <a class="dropdown-item" href="#">Salir</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-content">
+
+    <div class="container">
+        <div class="row section-content">
+            <div class="col-12 py-3">
+                <div class="heading-section">
+                    <h3 class="title-heading">
+                        <span class="icon-carpet-box title-icon"></span>
+                        <span class="inner-title">Configuración</span>
+                    </h3>
+                </div>
+            </div>
+    
+        
+            <div class="col-md-5 col-xl-4">
+    
+                <div id="menu-card" class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Datos Usuario</h5>
+                    </div>
+    
+                    <div class="list-group list-group-flush" role="tablist">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account" role="tab">Cuenta</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">Password</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-7 col-xl-8">
+
+
+
+                <div id="wrapp-info-suser" class="tab-content">
+                    <div class="tab-pane fade show active" id="account" role="tabpanel">
+    
+                        <div class="card">
+                            <div class="card-header">                                
+                                <h5 class="card-title mb-0">Información Pública</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-8">
+
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputUsername">Nombre Usuario</label>
+                                                <input type="text" class="form-control expanded-input" value="" autocomplete="new-date" id="inputUsername" placeholder="Username">
+                                            </div>
+
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputBio">Biografía</label>
+                                                <textarea rows="2" class="form-control expanded-textarea" id="inputBio"
+                                                    placeholder="Comenta algo sobre ti"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="text-center">
+                                                <img alt="Andrew Jones"
+                                                    src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                    class="rounded-circle img-responsive mt-2" width="128" height="128">
+                                                <div class="mt-2">
+                                                    <span class="btn btn-primary"><svg
+                                                            class="svg-inline--fa fa-upload fa-w-16" aria-hidden="true"
+                                                            data-prefix="fas" data-icon="upload" role="img"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                            data-fa-i2svg="">
+                                                            <path fill="currentColor"
+                                                                d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                                                            </path>
+                                                        </svg><!-- <i class="fas fa-upload"></i> --> Upload</span>
+                                                </div>
+                                                <small>FPara obtener mejores resultados, use una imagen al menos de 128px o 128px en .jpg</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="wrapper-btn btn-left">
+                                                <button type="submit" class="btn btn-full red guardar">Guardar cambios</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </form>
+    
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="card-header">                               
+                                <h5 class="card-title mb-0">Información Privada</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputName">Nombre</label>
+                                                <input type="text" class="form-control expanded-input" value="" autocomplete="new-name" id="inputName" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                            <label class="label-custom" for="inputApellidos">Apellidos</label>
+                                            <input type="text" class="form-control expanded-input" value="" autocomplete="new-apellidos" id="inputApellidos" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputEmail">Email</label>
+                                                <input type="email" class="form-control expanded-input" value="" autocomplete="new-email" id="inputEmail" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputDireccion">Dirección</label>
+                                                <input type="text" class="form-control expanded-input" value="" autocomplete="new-direccion" id="inputDireccion" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputComuna">Comúna</label>
+                                                <select id="inputComuna" class="form-control expanded-select">
+                                                    <option selected="">Selecciona</option>
+                                                    <option>...</option>
+                                                </select>                                           
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group wrapp-input">
+                                                <label class="label-custom" for="inputCiudad">Ciudad</label>
+                                                <input type="text" class="form-control expanded-input" value="" autocomplete="new-ciudad" id="inputCiudad" placeholder="">
+                                            </div>
+                                        </div>                                      
+                                        <div class="col-12">
+                                            <div class="wrapper-btn btn-left">
+                                                <button type="submit" class="btn btn-full red guardar">Guardar cambios</button>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                </form>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="tab-pane fade" id="password" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">                                
+                                <h5 class="card-title">Password</h5>
+                            </div>
+                            <div class="card-body">
+    
+                                <form>
+
+                                    <div class="col-12">
+                                        <div class="form-group wrapp-input">
+                                            <label class="label-custom">Contraseña actual</label>
+                                            <input type="password" class="form-control expanded-input" value="" autocomplete="new-date" id="inputUsername" placeholder="">
+                                            <small><a href="#">¿Olvidaste tu contraseña?</a></small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group wrapp-input">
+                                            <label class="label-custom">Nueva password</label>
+                                            <input type="password" class="form-control expanded-input" value="" autocomplete="new-date" id="inputUsername" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-group wrapp-input">
+                                            <label class="label-custom">Verificar contraseña</label>
+                                            <input type="password" class="form-control expanded-input" value="" autocomplete="new-date" id="inputUsername" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="wrapper-btn btn-left">
+                                            <button type="submit" id="btn-one" class="btn btn-full red">Guardar cambios</button>
+                                        </div>
+                                    </div>
+
+
+
+                                  
+                                    
+                                </form>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    </section>
+<footer id="footer">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <span class="text-white p-2 ">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Reservas <span>223 608 666</span>
+                </span>
+                <span class="text-white p-2">
+                    | <i class="fa fa-user" aria-hidden="true"></i> Servicio al cliente <span class="number"
+                        style="padding-right: 5px;">800 370 111</span> (L a V De 8 a 20 hrs) |
+                </span>
+                <span class="text-white p-2">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Asistencia 24/7<span>229 418 950</span>
+                </span>
+            </div>
+            <div class="col-12">
+                <p class="copyright py-3 mt-2">© 2020 Mitta</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="library/boostrap/dist/js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <script src="library/boostrap/dist/js/popper.min.js"></script>
+    <script src="library/boostrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    <!-- Menu Toggle Script -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+
+    <!-- MDBootstrap Datatables  -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+
+        $('#btn-one, .guardar').click(function (e) {
+            e.preventDefault
+                $('#btn-one, .guardar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...').addClass('disabled');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

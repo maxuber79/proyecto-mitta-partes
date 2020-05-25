@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 
 
-	$(function() {
+	/* $(function() {
 		var output = $('#output')[0];
 		
 		$(document).on('input', 'input[type="range"]', function(e) {
@@ -19,6 +19,6 @@ $(document).ready(function() {
 		$('input[type=range]').rangeslider({
 		  polyfill: false
 		});
-	  });
+	  }); */
 
 });

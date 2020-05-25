@@ -8,12 +8,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="library/datatable/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="library/datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="library/select2/css/select2.css">
+    <link rel="stylesheet" href="library/select2/css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="library/datepicker/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <title>Mitta!</title>
 </head>
 
@@ -44,40 +47,28 @@
                                 aria-hidden="true"></i>
                             <!-- <span class="navbar-toggler-icon"></span> -->
                         </button>
-
+    
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="dashboard.html">Inicio <span
+                                            class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                    <a class="nav-link" href="ingreso-solicitud.html">Ingreso Solicitud</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1"
-                                        aria-disabled="true">Disabled</a>
+                                    <a class="nav-link" href="seguimiento-solicitud.html">Seguimiento Solicitud</a>
                                 </li>
-
+    
                             </ul>
                             <ul class="navbar-nav ml-auto nav-flex-icons">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                            class="fa fa-user"></i> Profile </a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Mi cuenta</a>
                                     <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                                        <a class="dropdown-item" href="#">My account</a>
-                                        <a class="dropdown-item" href="#">Log out</a>
+                                        <a class="dropdown-item" href="perfil.html">Mi cuenta</a>
+                                        <a class="dropdown-item" href="#">Salir</a>
                                     </div>
                                 </li>
                             </ul>
@@ -129,9 +120,16 @@
                         <div class="wrapp-form"
                             style="border-radius:1rem;padding: 1.8rem 1.6rem;margin: 2rem 0 1rem 0;border: 1px solid #cecece;background-color: #fbfbfb;">
                             <form class="row">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                
-                                    <div class="form-group wrapp-input">
+
+                                <div class="col-12 py-2">
+                                    <h3 class="h2">Datos principales de la solicitud</h3>
+                                </div>
+                               
+
+                                <!--<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    
+
+                                     <div class="form-group wrapp-input">
                                         <label class="label-custom">Fecha Inicio</label>
                                         <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
                                             autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="01/01/2020">
@@ -194,13 +192,164 @@
                                         <label class="label-custom" for="exampleFormControlTextarea1">Example textarea</label>
                                         <textarea class="form-control expanded-textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="wrapper-btn btn-right">
-                                        <a href="#" class="btn btn-full red"><span class="icon-save"></span> Ingresar
-                                            Solicitud</a>
+                                </div> -->
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="inputNumeroDocumento">N° Documento TNT</label>
+                                        <input name="inputNumeroDocumento" type="text" id="inputNumeroDocumento" class="form-control-plaintext expanded-input" value="ODF001072" readonly>
+                                        <small id="passwordHelpBlock" class="form-text text-muted">
+                                            EL N° asignado es de forma automática, de acuerdo a l creación de la solicitud
+                                        </small>
                                     </div>
                                 </div>
+                                <div class="col-12 col-sm-6 col-md-6">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="inputDestinatario">Destinatario</label>
+                                        <select name="inputDestinatario" class="form-control expanded-select empresa" id="inputDestinatario">
+                                            <option>Empresa 1</option>
+                                            <option>Empresa 2</option>
+                                            <option>Empresa 3</option>
+                                            <option>Empresa 4</option>
+                                            <option>Empresa 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="inputFechaIngreso">Fecha Igreso</label>
+                                        <input namer="inputFechaIngreso" type="text" class="form-control expanded-input datepicker" id="inputFechaIngreso" value="" autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="ej. 05/06/2020">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom">Fecha entrega</label>
+                                        <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
+                                            autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="05/06/2020">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6">
+                                    <div class="form-group wrapp-checkbox">
+                                        <div class="vertical-centering">
+                                            <div class="custom-control custom-checkbox vertical-input">
+                                                <input name="inputEmpresaExterna" class="custom-control-input" type="checkbox" value="" id="inputEmpresaExterna">
+                                                <label class="custom-control-label" for="inputEmpresaExterna">
+                                                    Envio a empresa Externa
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6">
+                                    <div class="form-group wrapp-input">
+                                        <label name="InputEmpresa" class="label-custom" for="InputEmpresa">Empresa</label>
+                                        <select class="form-control expanded-select empresa" id="InputEmpresa">
+                                            <option>Empresa 1</option>
+                                            <option>Empresa 2</option>
+                                            <option>Empresa 3</option>
+                                            <option>Empresa 4</option>
+                                            <option>Empresa 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="inputObservaciones">Observaciones</label>
+                                        <textarea class="form-control expanded-textarea" id="inputObservaciones" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 py-2">
+                                    <h3 class="h2">Detalle de la solicitud</h3>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4">
+                                    <div class="form-group wrapp-input">
+                                        <label name="inputTipoDocumento" class="label-custom" for="inputTipoDocumento">Tipo de Documento</label>
+                                        <select class="form-control expanded-select empresa" id="inputTipoDocumento">
+                                            <option>Documento 1</option>
+                                            <option>Documento 2</option>
+                                            <option>Documento 3</option>
+                                            <option>Documento 4</option>
+                                            <option>Documento 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom">Fecha Ingreso</label>
+                                        <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
+                                            autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="05/06/2020">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom">N° Documento</label>
+                                        <input type="text" class="form-control expanded-input datepicker" id="aseg_fec_nacimiento" value=""
+                                            autocomplete="new-date" data-date-format="mm/dd/yyyy" placeholder="05/06/2020">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="alto">Alto</label>
+                                        <input type="text" id="inputalto" class="form-control expanded-input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="ancho">Ancho</label>
+                                        <input type="text" id="inputAncho" class="form-control expanded-input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="volumen">Volúmen</label>
+                                        <input type="text" id="inputVolumen" class="form-control expanded-input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                                    <div class="form-group wrapp-input">
+                                        <label class="label-custom" for="peso">Peso</label>
+                                        <input type="text" id="inputPeso" class="form-control expanded-input" placeholder="" required>
+                                    </div>
+                                </div>                                
+                                <div class="col-12 col-sm-6 col-md-6 py-3">
+                                    <div class="wrapper-btn btn-left">
+                                        <a class="btn btn-full black" data-toggle="collapse" data-target="#bitacora" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Bitácora Solicitud</a>
+                                    </div>                                                                            
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 py-3">
+                                    <div class="wrapper-btn btn-right">
+                                        <a href="#" class="btn btn-full red guardar"><span class="icon-save"></span> Ingresar Solicitud</a>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="collapse" id="bitacora">
+
+                                    <div class="border border-light py-2 px-3">
+                                        <p class="badge badge-info p-2"><strong>Order ID:</strong> OD45345345435</p>
+                                        <article class="card">
+                                            <div class="card-body row">
+                                                <div class="col-12 col-sm-3 col-md-3"> 
+                                                <strong>Fecha Ingreso:</strong><br>29 nov 2019 </div>
+                                                <div class="col-12 col-sm-3 col-md-3">
+                                                <strong>Usuario:</strong><br> Lorem ipsum dolor</div>
+                                                <div class="col-12 col-sm-3 col-md-3">
+                                                <strong>Evento:</strong><br> Lorem ipsum dolor</div>
+                                                <div class="col-12 col-sm-3 col-md-3"> <strong>Tracking TNT:</strong> <br> BD045903594059 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
                                 <div class="col-12 mt-3">
                                     <div class="alert alert-success my-2 text-center" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -233,10 +382,22 @@
     
     </section>
 <footer id="footer">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
-                <p class="copyright">© 2020 Mitta</p>
+                <span class="text-white p-2 ">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Reservas <span>223 608 666</span>
+                </span>
+                <span class="text-white p-2">
+                    | <i class="fa fa-user" aria-hidden="true"></i> Servicio al cliente <span class="number"
+                        style="padding-right: 5px;">800 370 111</span> (L a V De 8 a 20 hrs) |
+                </span>
+                <span class="text-white p-2">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Asistencia 24/7<span>229 418 950</span>
+                </span>
+            </div>
+            <div class="col-12">
+                <p class="copyright py-3 mt-2">© 2020 Mitta</p>
             </div>
         </div>
     </div>
@@ -410,16 +571,58 @@
 <script type="text/javascript" src="library/datatable/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="library/datatable/js/dataTables.bootstrap4.min.js"></script>
 
+<!-- slect 2 Script -->
+<script src="library/select2/js/select2.min.js"></script>
+
+<script src="library/datatable/DataTables-1.10.21/js/dataTables-responsive.min.js"></script>
 <!-- DataPicker -->
 <script src="library/datepicker/bootstrap-datepicker.min.js"></script>
 <script src="library/datepicker/custom-datepicker.js"></script>
 <script src="library/datepicker/bootstrap-datepicker.es.min.js"></script>
-
 <script>
-    $(document).ready(function () {
-        jQuery('#table_solicitudes').DataTable();
-    });
-</script>
+$(document).ready(function () {
+            /* data table */
+            jQuery('#table_solicitudes').DataTable({
+                responsive: true,
+                 columnDefs: [
+                    { responsivePriority: 1, targets: 0 },
+                     { responsivePriority: 2, targets: -1 }
+                ]
+            });
+
+            /* onlclick button */
+            $('#btn-one, .guardar').click(function (e) {
+                e.preventDefault
+                $('#btn-one, .guardar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...').addClass('disabled');
+            });
+            
+            /* select 2 */
+            $('select').each(function () {
+                $(this).select2({
+                    theme: 'bootstrap4',
+                    tags: 'true',
+                    placeholder: "Select an option",
+                    allowClear: true
+                });
+            });
+                
+            /* $('.ciudad').select2({
+                theme: 'bootstrap4',
+                allowClear: true,
+                placeholder: 'Position'
+            });
+            $('.comuna').select2({
+                theme: 'bootstrap4',
+                allowClear: true,
+                placeholder: 'Position'
+            }); */
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+             jQuery('#table_solicitudes').DataTable();
+        });
+    </script>
 
     </body>
 </html>
